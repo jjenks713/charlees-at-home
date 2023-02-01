@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 export default function Navbar(props) {
     const logo = props.logo
-    console.log(logo.image.url)
+
     return (
         <div className="navbar bg-gray-100 px-4">
             <div className="flex-1">

@@ -10,7 +10,6 @@ export default function Home(props) {
   const logo = props.logo.data.logo
   const background = props.background.data.backgroundImage.background.url
   const menu = props.menu
-  console.log(background)
   return (
     <div>
       <Head>

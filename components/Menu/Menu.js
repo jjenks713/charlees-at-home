@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 
 export default function Menu(props) {
 
-    console.log(props)
     const menus = props.menu.data.menuItemsCollection.items
 
     return (
