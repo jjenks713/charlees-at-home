@@ -2,5 +2,5 @@
 
 module.exports = {
   reactStrictMode: true,
-  plugins: [require("daisyui")],
+  plugins: [],
 }
