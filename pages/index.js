@@ -1,17 +1,16 @@
 import Head from 'next/head'
-import { getHeaders, getLogo, getMenu } from '../lib/api'
+import { getBackground, getHeaders, getLogo, getMenu } from '../lib/api'
 import Navbar from '../components/Navbar/Navbar'
 import Menu from '../components/Menu/Menu'
 import { motion } from 'framer-motion'
 import Footer from '../components/Footer/Footer'
 
 export default function Home(props) {
-  console.log(props)
-
   const headers = props.headers.data.headersCollection.items
   const logo = props.logo.data.logo
+  const background = props.background.data.backgroundImage.background.url
   const menu = props.menu
-  console.log(headers[0].firstHeader)
+  console.log(background)
   return (
     <div>
       <Head>
@@ -21,7 +20,7 @@ export default function Home(props) {
       </Head>
       <Navbar logo={logo} />
       <main className='bg-gray-900'>
-        <div className="hero min-h-screen" style={{ backgroundImage: `url(/SAM_7031.PNG)` }}>
+        <div className="hero min-h-screen" style={{ backgroundImage: `url(${background})` }}>
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md text-white">
@@ -48,8 +47,9 @@ export async function getServerSideProps({ preview = true }) {
   const headers = (await getHeaders(preview)) ?? []
   const logo = (await getLogo(preview)) ?? []
   const menu = (await getMenu(preview)) ?? []
+  const background = (await getBackground(preview)) ?? []
 
   return {
-    props: { headers, logo, menu },
+    props: { headers, logo, menu, background },
   }
 }
