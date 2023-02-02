@@ -5,7 +5,7 @@ export default function Navbar(props) {
     const logo = props.logo
 
     return (
-        <div className="navbar bg-gray-100 px-4">
+        <div className="navbar bg-gray-100 px-4 fixed z-50">
             <div className="flex-1">
                 <Link href={'/'}><img src={logo.image.url} alt={logo.title} className='h-20' /></Link>
             </div>
