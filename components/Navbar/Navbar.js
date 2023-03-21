@@ -12,13 +12,9 @@ export default function Navbar(props) {
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
                     <li className="text-black">
-                        <motion.button
-                            className="btn glass"
-                            whileHover={{ scale: 1.1 }}
-                        >
-                            <a href="https://charlees-heat-at-home.square.site/" target='_blank'>Order Now</a>
-                        </motion.button>
+                        <a href="https://www.charleescomfortkitchen.com/" target='_blank'>Charlees Comfort Kitchen</a>
                     </li>
+                    
                 </ul>
             </div>
         </div>
