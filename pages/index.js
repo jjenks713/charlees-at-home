@@ -39,8 +39,8 @@ export default function Home(props) {
             <br/><br/>
             <motion.button
                 whileHover={{ scale: 1.1 }}
-                className="rounded-lg glass text-white">
-                  <a href='tel:+4352263635'>(435)226-3635</a>
+                className="rounded-lg glass text-white p-2">
+                  <a href='tel:4352263635'>(435)226-3635</a>
               </motion.button>
             </p>
           </div>
