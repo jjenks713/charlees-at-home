@@ -46,9 +46,9 @@ export default function Home(props) {
           </div>
 
         </div>
-        <div className='container mx-auto py-24'>
+        {/* <div className='container mx-auto py-24'>
           <Menu menu={menu} />
-        </div>
+        </div> */}
       </main>
       <Footer />
     </div>
